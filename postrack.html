@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Position Tracker</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body{
+            background: #34495e;
+            color: #fff; 
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        }
+        .container{
+            margin: 0 auto;
+            width: 800px;
+        }
+        @media screen and (max-width: 880px){
+            .container{
+                width: auto;
+                margin: 0 40px;
+            }
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -4px;
+            font-size: 48px;
+            text-shadow: 0 0 6px rgba(0,0,0,0,.1);
+        }
+        a{
+            color: #f1c40f;
+        }
+        form{
+
+            display: flex;
+        }
+        input{
+            flex: 1; 
+            font-size: 16px;
+            background: #ecf0f1;
+            color: #34495e;
+            padding: 15px;
+            text-decoration: none;
+            display: inline-block;
+            border: 0px;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            border-left: 2px solid #95a5a6;
+            border-top: 2px solid #95a5a6;
+            border-bottom: 2px solid #95a5a6;
+            border-radius: 5px 0 0 5px;
+            transition: 0.2s all ease-in-out;
+        }
+        input:focus{
+
+            outline: 0px;
+            border-color: #8e44ad;
+        }
+        button{
+            background: #8e44ad;
+            color: #fff;
+            font-size: 16px;
+            padding: 15px;
+            text-decoration: none;
+            display: inline-block;
+            border: 0px;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            border-radius: 0 5px 5px 0;
+            box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1);
+            transition: 0.2s all ease-in-out;
+        }
+        button:hover,
+        button:focus{
+
+            background: #f1c40f;
+        }
+        button:active{
+
+            outline: 0px;
+            box-shadow: none;
+        }
+        table{
+            width: 100%;
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        table tr td, 
+        table tr th{
+            
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+        table td a{
+            display: block;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h1>Position Tracker</h1>
+            <form method="GET" id="pf">
+                <input type="text" id="s" name="s">
+                <button type="submit">Check Rank</button>
+            </form>
+            <table id="results"></table>
+        </div>
+        <script>
+            $("#pf").submit(function(event){
+                event.preventDefault(); // stop form submit
+                $('#results').html('');
+                $.ajax({ 
+                    type: 'GET', 
+                    url: 'https://dmoutatime.herokuapp.com/?s=coronavirus', 
+                    data: { s: $('#s').val() }, 
+                    success: function (data) { 
+                        $.each(data, function(index, element) {
+                            $('#results').append('<tr><th>' + element.position + '</th><td><a target="_blank" href="'+ element.url +'">'+ element.url +'</a></td></tr>');
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
