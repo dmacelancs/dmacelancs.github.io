@@ -77,7 +77,7 @@
         grid-gap: 1rem;
     }
 
-    .widget-grid.single-col{
+    .widget-grid.single-col {
         grid-template-columns: 1fr;
     }
 
@@ -100,26 +100,25 @@
         padding: 1rem;
     }
 
-    footer{
+    footer {
         background-color: #000;
         color: #fff;
         padding: 1rem 0;
         margin-top: 1rem;
     }
 
-    @media screen and ( max-width: 800px ) {
-        .container{
+    @media screen and (max-width: 800px) {
+        .container {
             max-width: 90vw;
         }
 
-        .widget-grid{
+        .widget-grid {
             grid-template-columns: 1fr;
         }
     }
-
 </style>
 
-<body>
+<body id="body">
     <header>
         <div class="container">
             <div class="header-layout">
@@ -197,5 +196,33 @@
         </div>
     </footer>
 </body>
+
+<script>
+    // Select random background colour on load.
+    window.addEventListener('load', function () {
+        let body = document.getElementById("body");
+
+        body.style.backgroundColor = [
+            '#B71C1C',
+            '#880E4F',
+            '#4A148C',
+            '#311B92',
+            '#0D47A1',
+            '#0D47A1',
+            '#006064',
+            '#004D40',
+            '#1B5E20',
+            '#33691E',
+            '#827717',
+            '#F57F17',
+            '#FF6F00',
+            '#E65100',
+            '#BF360C',
+            '#3E2723',
+            '#212121',
+            '#263238',
+        ][Math.floor(Math.random() * (5)) + 0];
+    });
+</script>
 
 </html>
