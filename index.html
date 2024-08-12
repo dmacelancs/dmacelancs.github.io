@@ -72,6 +72,13 @@
         margin: 0 auto;
     }
 
+    #intro {
+
+        padding: 1rem 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
     .widget-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -123,7 +130,9 @@
     <header>
         <div class="container">
             <div class="header-layout">
-                <a href="https://danmace.co.uk/" class="logo">Dan Mace</a>
+                <a href="https://danmace.co.uk/" class="logo">
+                    <h1>Dan Mace</h1>
+                </a>
                 <nav>
                     <ul>
                         <li><a href="https://danmace.co.uk/#skills">Skills</a></li>
@@ -135,8 +144,10 @@
     </header>
     <main>
         <div class="container">
-            <h1>Dan Mace</h1>
-            <p>Backend developer based in Workington, UK.</p>
+            <section id="intro">
+                <p>Hi, I'm a backend developer based in Workington, UK.</p>
+                <p>Currently, I'm building WordPress/WooCommerce plugins over at Zap.</p>
+            </section>
             <section id="skills">
                 <h2>Skills</h2>
                 <div class="widget-grid">
@@ -171,7 +182,7 @@
                 <div class="widget-grid single-col">
                     <div class="widget">
                         <div class="widget-title">
-                            <p><strong>Backend WordPress Developer</strong> | Think Zap Limited<br>
+                            <p><strong>Backend WordPress Developer</strong> | Zap<br>
                                 Nov '23 - Present</p>
                         </div>
                     </div>
