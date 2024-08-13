@@ -12,8 +12,17 @@
         margin: 0;
         background-color: #fff;
         color: #000;
-        font-family: "Apple Garamond", Serif;
+        font-family: Helvetica, Arial, Sans-Serif;
         transition: 10s background-color ease-in-out;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Apple Garamond", Serif;
     }
 
     header {
@@ -77,7 +86,8 @@
 
         padding: 1rem 0;
         font-size: 22px;
-        background: rgba(18, 140, 80, 0.25);
+        background: #023ecf;
+        color: #fff;
     }
 
     #skills,
@@ -89,7 +99,7 @@
     .widget-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
+        grid-gap: 2rem;
     }
 
     .widget-grid.single-col {
@@ -106,8 +116,10 @@
         padding: 1rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         margin: 0;
-        font-size: 18px;
-        font-weight: bold;
+    }
+
+    .widget .widget-title h3 {
+        margin: 0;
     }
 
     .widget .widget-content {
@@ -166,7 +178,9 @@
                 <h2>Skills</h2>
                 <div class="widget-grid">
                     <div class="widget">
-                        <div class="widget-title">Languages</div>
+                        <div class="widget-title">
+                            <h3>Languages</h3>
+                        </div>
                         <div class="widget-content">
                             <ul>
                                 <li>PHP</li>
@@ -180,12 +194,15 @@
                         </div>
                     </div>
                     <div class="widget">
-                        <div class="widget-title">Frameworks &amp; Software</div>
+                        <div class="widget-title">
+                            <h3>Frameworks, Tools, and Software</h3>
+                        </div>
                         <div class="widget-content">
                             <ul>
                                 <li>WordPress</li>
                                 <li>WooCommerce</li>
                                 <li>Laravel</li>
+                                <li>PHPUnit</li>
                             </ul>
                         </div>
                     </div>
@@ -196,20 +213,20 @@
                 <div class="widget-grid single-col">
                     <div class="widget">
                         <div class="widget-title">
-                            <p><strong>Backend WordPress Developer</strong> | Zap<br>
-                                Nov '23 - Present</p>
+                            <h3>Backend WordPress Developer | Zap</h3>
+                            <p>Nov '23 - Present</p>
                         </div>
                     </div>
                     <div class="widget">
                         <div class="widget-title">
-                            <p><strong>Website Development Manager</strong> | KCS IT Services<br>
-                                Oct '18 - Nov '23</p>
+                            <h3>Website Development Manager | KCS IT Services</h3>
+                            <p>Oct '18 - Nov '23</p>
                         </div>
                     </div>
                     <div class="widget">
                         <div class="widget-title">
-                            <p><strong>Owner / Website Designer</strong> | Cumbria Web Solutions<br>
-                                Dec '15 - Jan '19</p>
+                            <h3>Owner / Website Designer | Cumbria Web Solutions</h3>
+                            <p>Dec '15 - Jan '19</p>
                         </div>
                     </div>
                 </div>
