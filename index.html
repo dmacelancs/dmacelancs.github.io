@@ -3,17 +3,16 @@
 <head>
     <title>Dan Mace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
+
 </head>
 <style>
     body {
         padding: 0;
         margin: 0;
-        background-color: #000;
-        color: #fff;
-        font-family: "Hanken Grotesk";
+        background-color: #fff;
+        color: #000;
+        font-family: "Apple Garamond", Serif;
         transition: 10s background-color ease-in-out;
     }
 
@@ -37,7 +36,7 @@
         color: #000;
     }
 
-    header a.logo h1{
+    header a.logo h1 {
         font-size: inherit;
     }
 
@@ -92,22 +91,22 @@
     }
 
     .widget {
-        background: rgba(0, 0, 0, 0.1);
         padding: 0;
         border: 2px solid rgba(255, 255, 255, 0.2);
 
     }
 
     .widget .widget-title {
-        background: rgba(255, 255, 2555, 0.1);
+        background: rgba(0, 0, 0, 0.05);
         padding: 1rem;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
         margin: 0;
         font-size: 18px;
     }
 
     .widget .widget-content {
         padding: 1rem;
+        background: rgba(0, 0, 0, 0.025);
     }
 
     footer {
@@ -210,33 +209,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-    // Select random background colour on load.
-    window.addEventListener('load', function () {
-        let body = document.getElementById("body");
-
-        body.style.backgroundColor = [
-            '#B71C1C',
-            '#880E4F',
-            '#4A148C',
-            '#311B92',
-            '#0D47A1',
-            '#0D47A1',
-            '#006064',
-            '#004D40',
-            '#1B5E20',
-            '#33691E',
-            '#827717',
-            '#F57F17',
-            '#FF6F00',
-            '#E65100',
-            '#BF360C',
-            '#3E2723',
-            '#212121',
-            '#263238',
-        ][Math.floor(Math.random() * (5)) + 0];
-    });
-</script>
 
 </html>
