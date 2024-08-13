@@ -3,8 +3,8 @@
 <head>
     <title>Dan Mace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
-
+<link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
+                
 </head>
 <style>
     body {
@@ -19,7 +19,7 @@
     header {
         color: #023ecf;
         background: #fff;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
         padding: 1rem;
     }
 
@@ -36,7 +36,7 @@
         color: #000;
     }
 
-    header a.logo h1 {
+    header a.logo h1{
         font-size: inherit;
     }
 
@@ -77,8 +77,14 @@
 
         padding: 1rem 0;
         font-size: 22px;
-        font-weight: bold;
+background: rgba(18, 140, 80, 0.25);
     }
+
+    #skills,
+#experience{
+
+padding: 1rem 0;
+}
 
     .widget-grid {
         display: grid;
@@ -97,7 +103,7 @@
     }
 
     .widget .widget-title {
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(0, 18, 80, 0.20);
         padding: 1rem;
         border-bottom: 2px solid rgba(0, 0, 0, 0.05);
         margin: 0;
@@ -144,11 +150,13 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <section id="intro">
-                <p>Hi, I'm a backend developer based in Workington, UK.</p>
+<section id="intro">
+<div class="container">
+<h2>Hi, I'm a backend developer based in Workington, UK.</h2>
                 <p>Currently, I'm building WordPress/WooCommerce plugins over at Zap.</p>
-            </section>
+</div>
+</section>
+        <div class="container">
             <section id="skills">
                 <h2>Skills</h2>
                 <div class="widget-grid">
