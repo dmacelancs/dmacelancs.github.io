@@ -1,0 +1,157 @@
+$accent-color: #F4511E;
+
+/*
+Global Styles
+______________________________________________________________________*/
+body {
+    padding: 1em;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: "JetBrains Mono", monospaced;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
+a{
+    color: $accent-color;
+}
+
+button,
+.button{
+    display: inline-block;
+    background: $accent-color;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: .5em 1em;
+    outline: 2px solid $accent-color;
+    border: 2px solid black;
+    border-radius: .5em;
+    margin: 1em 0;
+
+    &:hover,
+    &:focus{
+        background: darken($accent-color, 10%);
+        outline-color: darken($accent-color, 10%);
+        cursor: pointer;
+    }
+
+    &.alt{
+        background: #fff;
+        outline-color: #fff;
+        color: $accent-color;
+
+        &:hover,
+    &:focus{
+        background: darken(#fff, 10%);
+        outline-color: darken(#fff, 10%);
+        cursor: pointer;
+    }
+    }
+}
+
+/*
+Layout
+______________________________________________________________________*/
+#site-layout{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+Header & Nav
+______________________________________________________________________*/
+#header{
+    border-bottom: 1px solid #222;
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+
+    #logo{
+        h1,
+        p{
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+
+    #navbar{
+        ul{
+            display: flex;
+            gap: 2em;
+            margin: 0;
+            padding: 0;
+            li{
+                display: block;
+                margin: 0;
+                padding: 0;
+
+                a{
+                    display: block;
+                    padding: 0.25em 0;
+                    text-decoration: none;
+                    color: #999;
+
+                    &.active{
+                        border-bottom: 2px solid #fff;
+                    }
+
+                    &:hover,
+                    &:focus{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+Content
+______________________________________________________________________*/
+#content{
+    flex: 1;
+
+    .content-section{
+        padding: 4em 0;
+        border-bottom: 1px solid #222;
+    }
+}
+
+/*
+Experience Toggles
+______________________________________________________________________*/
+.experience-toggles{
+    .experience{
+        border: 2px solid #222;
+        margin-bottom: 1em;
+
+        .experience-title{
+            border-bottom: 1px solid #222;
+            padding: 1em;
+
+            h3{
+                margin: 0;
+                font-size: 1em;
+            }
+        }
+
+        .experience-details{
+            padding: 1em;
+        }
+    }
+}
+
+/*
+Footer
+______________________________________________________________________*/
+#footer{
+    border-top: 1px solid #222;
+    padding: 2em;
+}

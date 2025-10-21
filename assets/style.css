@@ -1,0 +1,119 @@
+/*
+Global Styles
+______________________________________________________________________*/
+body {
+  padding: 1em;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: "JetBrains Mono", monospaced; }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0 0 1em 0; }
+
+a {
+  color: #F4511E; }
+
+button,
+.button {
+  display: inline-block;
+  background: #F4511E;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: .5em 1em;
+  outline: 2px solid #F4511E;
+  border: 2px solid black;
+  border-radius: .5em;
+  margin: 1em 0; }
+  button:hover, button:focus,
+  .button:hover,
+  .button:focus {
+    background: #d53b0a;
+    outline-color: #d53b0a;
+    cursor: pointer; }
+  button.alt,
+  .button.alt {
+    background: #fff;
+    outline-color: #fff;
+    color: #F4511E; }
+    button.alt:hover, button.alt:focus,
+    .button.alt:hover,
+    .button.alt:focus {
+      background: #e6e6e6;
+      outline-color: #e6e6e6;
+      cursor: pointer; }
+
+/*
+Layout
+______________________________________________________________________*/
+#site-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+/*
+Header & Nav
+______________________________________________________________________*/
+#header {
+  border-bottom: 1px solid #222;
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between; }
+  #header #logo h1,
+  #header #logo p {
+    font-size: 1em;
+    margin: 0; }
+  #header #navbar ul {
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0; }
+    #header #navbar ul li {
+      display: block;
+      margin: 0;
+      padding: 0; }
+      #header #navbar ul li a {
+        display: block;
+        padding: 0.25em 0;
+        text-decoration: none;
+        color: #999; }
+        #header #navbar ul li a.active {
+          border-bottom: 2px solid #fff; }
+        #header #navbar ul li a:hover, #header #navbar ul li a:focus {
+          color: #fff; }
+
+/*
+Content
+______________________________________________________________________*/
+#content {
+  flex: 1; }
+  #content .content-section {
+    padding: 4em 0;
+    border-bottom: 1px solid #222; }
+
+/*
+Experience Toggles
+______________________________________________________________________*/
+.experience-toggles .experience {
+  border: 2px solid #222;
+  margin-bottom: 1em; }
+  .experience-toggles .experience .experience-title {
+    border-bottom: 1px solid #222;
+    padding: 1em; }
+    .experience-toggles .experience .experience-title h3 {
+      margin: 0;
+      font-size: 1em; }
+  .experience-toggles .experience .experience-details {
+    padding: 1em; }
+
+/*
+Footer
+______________________________________________________________________*/
+#footer {
+  border-top: 1px solid #222;
+  padding: 2em; }
+
+/*# sourceMappingURL=style.css.map */
